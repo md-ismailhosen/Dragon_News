@@ -1,13 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Navigate } from 'react-router-dom';
+import { AuthContext } from '../AuthContext/AuthContext';
 
 const Home = () => {
+
+    const { user } = useContext(AuthContext);
+
     return (
-        <Navigate to="/category/1">
-            <div>
-                <h1>home page</h1>
-            </div>
-        </Navigate>
+        <div>
+            
+            <h1>Home Page</h1>
+
+            <Navigate to="/category/1" />
+        </div>
     );
 };
 

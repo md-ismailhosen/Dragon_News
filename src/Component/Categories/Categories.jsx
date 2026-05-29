@@ -5,7 +5,7 @@ const categoryPromise = fetch("public/categories.json")
 
 const Categories = () => {
     const categories = use(categoryPromise);
-    console.log(categories);
+    //console.log(categories);
     return (
         <div>
             <h2 className='font-bold'>all categories</h2>
@@ -28,7 +28,7 @@ const Categories = () => {
             .then(data => setCategories(data))
     }, []);
 
-    console.log(categories);
+    //console.log(categories);
 
     return (
         <div>
